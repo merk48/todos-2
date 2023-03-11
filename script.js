@@ -85,6 +85,11 @@ function addElement(tasksArr) {
   // Clear tasks UL
   tasks.innerHTML = "";
 
+  //
+    totalTasks.innerHTML = tasksArr.length;
+  doneTasks.innerHTML = tasksArr.filter((task) => task.done === true).length;
+
+  
   // Add task LI
   tasksArr.forEach((task) => {
     let taskLi = document.createElement("li");
